@@ -1,0 +1,159 @@
+/* --------------------------------------------------
+	 Portfolio Site - CSS Shell
+	 Placeholders provided for fonts and color palette
+	 Fill in the values where indicated
+-------------------------------------------------- */
+
+:root {
+    /* ------------------
+		 Fonts (replace placeholders)
+		 Example: --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+	------------------ */
+    --font-sans: "--FONT-SANS--";
+    /* Primary UI / display font */
+    --font-serif: "--FONT-SERIF--";
+    /* Optional serif font */
+    --font-mono: "--FONT-MONO--";
+    /* Optional monospace font */
+
+    /* ------------------
+		 Color palette (replace placeholders)
+		 Use hex, rgb(), or CSS color names
+	------------------ */
+    --color-bg: var(--palette-bg, "--COLOR-BG--");
+    --color-surface: var(--palette-surface, "--COLOR-SURFACE--");
+    --color-primary: var(--palette-primary, "--COLOR-PRIMARY--");
+    --color-primary-contrast: var(--palette-primary-contrast, "--COLOR-PRIMARY-CONTRAST--");
+    --color-accent: var(--palette-accent, "--COLOR-ACCENT--");
+    --color-muted: var(--palette-muted, "--COLOR-MUTED--");
+    --color-text: var(--palette-text, "--COLOR-TEXT--");
+    --color-border: var(--palette-border, "--COLOR-BORDER--");
+
+    /* Semantic helpers */
+    --success: "--COLOR-SUCCESS--";
+    --warning: "--COLOR-WARNING--";
+    --danger: "--COLOR-DANGER--";
+}
+
+/* ------------------
+	 Base / reset (minimal)
+ ------------------ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------
+	 Typography scale (examples, adjust as needed)
+ ------------------ */
+:root {
+    --fs-xxl: 2.25rem;
+    --fs-xl: 1.75rem;
+    --fs-lg: 1.25rem;
+    --fs-base: 1rem;
+    --fs-sm: 0.875rem;
+    --fs-xs: 0.75rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 0.5em 0;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+}
+
+h1 {
+    font-size: var(--fs-xxl);
+}
+
+h2 {
+    font-size: var(--fs-xl);
+}
+
+h3 {
+    font-size: var(--fs-lg);
+}
+
+p {
+    margin: 0 0 1em 0;
+    font-size: var(--fs-base);
+}
+
+nav {
+    float: left;
+    width: 220px;
+    padding: 1rem;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* ------------------
+	 Utilities (quick helpers)
+ ------------------ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--color-primary);
+    color: var(--color-primary-contrast);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.muted {
+    color: var(--color-muted);
+}
+
+/* ------------------
+	 Components shell examples
+ ------------------ */
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: var(--color-accent);
+    color: var(--color-primary-contrast);
+    font-size: var(--fs-sm);
+}
+
+/* End of shell - replace placeholder values in :root */
