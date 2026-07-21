@@ -49,20 +49,24 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 :root {
-    --ground: #333;
-    --resting: #bbb;
-    --active: #f77;
-    --hover: #ee7;
-    --label: #777;
+  --ground: #333;
+  --body: #bbb;
+  --active: #f77;
+  --hover: #ee7;
+  --label: #777;
+  --page: #333;
 
-    --serif: "Cardo", Georgia, serif;
-    --mono: "JetBrains Mono", monospace;
+  --serif: "Cardo", Georgia, serif;
+  --mono: "JetBrains Mono", monospace;
+
+  --sidebar: 14rem;
+  --gutter: 2rem;
 }
 
 [data-cycle="gross-gloss"] {
   --ground: #00a;
   --body: #bbb;
-  --active: #afe;
+  --active: #ee7;
   --hover: #08f;
   --label: #afe;
 }
@@ -71,32 +75,104 @@
   --ground: #800;
   --body: #FFF;
   --active: #EE7;
-  --hover: #F77;
+  --hover: #c4c;
   --label: #F77;
 }
 
-[data-cycle="technomystic"] {
+[data-cycle="neomedieval"] {
   --ground: #640;
   --body: #fff;
   --active: #ee7;
-  --hover: #d85;
+  --hover: #c4c;
   --label: #d85;
 }
 
 body {
-    background: var(--ground);
-    color: var(--resting);    
-    font-family: var(--serif); 
+  background: var(--page);
+  color: var(--body);    
+  font-family: var(--serif); 
+
+  display: grid;
+  grid-template-columns: var(--sidebar) 1fr;
+  gap: var(--gutter);
+  padding: var(--gutter);
+  margin: 0;
+  min-height: 100vh;
 }
 
-a {
-    color: var(--label);    
+footer {
+  grid-column: 1 / -1;
+}
+
+header {
+  position: sticky;
+  top: var(--gutter);
+  align-self: start;
+  max-height: calc(100vh - var(--gutter) * 2);
+  overflow-y: auto;
+  background: var(--ground);
+  padding: var(--gutter);
+  border-radius: 0.25rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+nav a[aria-current="page"] {
+  color: var(--active);
+  background: var(--ground);    
 }
 
 a:hover {
-    color: var(--hover);
+  color: var(--hover);
+}
+
+a {
+  color: var(--label);
+  text-decoration: none;
+}
+
+main {
+  max-width: 120ch;
 }
 
 figure, nav {
-     font-family: var(--mono); 
+  font-family: var(--mono); 
+}
+
+figure {
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--body);
+  color: var(--label);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 40rem) {
+  body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  header {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
