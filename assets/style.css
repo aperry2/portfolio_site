@@ -49,7 +49,7 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 :root {
-  --ground: #333;
+  --ground: #000;
   --body: #bbb;
   --active: #f77;
   --hover: #ee7;
@@ -140,14 +140,18 @@ main {
   max-width: 120ch;
 }
 
+section {
+  margin-block-end: 6rem;
+}
+
 figure, nav {
   font-family: var(--mono); 
 }
 
 figure {
   padding: 1rem;
-  border-radius: 0.25rem;
-  background-color: var(--body);
+  border-radius: 0.15rem;
+  background-color: var(--ground);
   color: var(--label);
   font-size: 0.75rem;
 }
