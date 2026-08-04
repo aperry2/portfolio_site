@@ -1,5 +1,3 @@
-
-
 @font-face {
   font-family: "Cardo";
   src: url("/assets/font/Cardo-Regular.ttf") format("truetype");
@@ -7,6 +5,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Cardo";
   src: url("/assets/font/Cardo-Bold.ttf") format("truetype");
@@ -14,6 +13,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Cardo";
   src: url("/assets/font/Cardo-Italic.ttf") format("truetype");
@@ -29,6 +29,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "JetBrains Mono";
   src: url("/assets/font/JetBrainsMono-Bold.ttf") format("truetype");
@@ -36,6 +37,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "JetBrains Mono";
   src: url("/assets/font/JetBrainsMono-Italic.ttf") format("truetype");
@@ -89,8 +91,8 @@
 
 body {
   background: var(--page);
-  color: var(--body);    
-  font-family: var(--serif); 
+  color: var(--body);
+  font-family: var(--serif);
 
   display: grid;
   grid-template-columns: var(--sidebar) 1fr;
@@ -119,12 +121,12 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  
+
 }
 
 nav a[aria-current="page"] {
   color: var(--active);
-  background: var(--ground);    
+  background: var(--ground);
 }
 
 a:hover {
@@ -144,8 +146,9 @@ section {
   margin-block-end: 6rem;
 }
 
-figure, nav {
-  font-family: var(--mono); 
+figure,
+nav {
+  font-family: var(--mono);
 }
 
 figure {
