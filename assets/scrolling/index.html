@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Scrolling In The Walled Garden</title>
+  </head>
+  <body style="text-align: center; padding: 40px; border: 0; margin: 0; background-color: rgb(10, 10, 10);">
+      <canvas id="unity-canvas" width=1280 height=720 style="width: 1280px; height: 720px; background: #231F20"></canvas>
+      <script src="Build/WebGL_Build.loader.js"></script>
+      <script>
+          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+              // Mobile device style: fill the whole browser client area with the game canvas:
+              var meta = document.createElement('meta');
+              meta.name = 'viewport';
+              meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+              document.getElementsByTagName('head')[0].appendChild(meta);
+
+              var canvas = document.querySelector("#unity-canvas");
+              canvas.style.width = "100%";
+              canvas.style.height = "100%";
+              canvas.style.position = "fixed";
+
+              document.body.style.textAlign = "left";
+          }
+
+          createUnityInstance(document.querySelector("#unity-canvas"), {
+              dataUrl: "Build/WebGL_Build.data",
+              frameworkUrl: "Build/WebGL_Build.framework.js",
+              codeUrl: "Build/WebGL_Build.wasm",
+              streamingAssetsUrl: "StreamingAssets",
+              companyName: "Alan Perry",
+              productName: "ScrollingInTheWalledGarden",
+              productVersion: "0.1",
+              // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+              // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+          });
+      </script>
+      <img style="width:70%;" src="Scroll_text.png">
+      <p style="font-size: 1em; width: 70%; text-align: center; margin-left: auto; margin-right: auto; color: rgb(230, 228, 197); font-family: sans-serif;">
+          Alan Perry
+        </p>
+      <p style="font-size: 1.2em; width: 70%; text-align: left; margin-left: auto; margin-right: auto; color: rgb(230, 228, 197); font-family: sans-serif; ">
+        <em>Scrolling in the Walled Garden</em> is a web-based meditation on the impact of the smartphone on socioeconomics and data surveillance. Created in the Unity game engine, it is a continually-running simulation of a figure wearing a metallic motion-capture suit walking between different crowds of smaller, 2-dimensional figures using smartphones and working fields.
+      </p>
+      <p style="font-size: 1.2em; width: 70%; text-align: left; margin-left: auto; margin-right: auto; color: rgb(230, 228, 197); font-family: sans-serif; ">
+          The visual aesthetics of the artwork reference digital communication technologies, like FaceTime, as well as late medieval altarpieces and illuminated manuscripts. In the center panel is a view of a digital space regularly interrupted by text, while to the left and right are other views of the same landscape. Continuous motion is used to create a visual experience where the viewer’s attention always has shifting demands. Above the landscape are floating stanzas from a poem about engagement with smartphones; the text is difficult to comprehend in an echo of how online reading is typically quick and shallow, with little chance of comprehension, unless done with intentional effort.
+      </p>
+      <p style="font-size: 1.2em; width: 70%; text-align: left; margin-left: auto; margin-right: auto; color: rgb(230, 228, 197); font-family: sans-serif; ">
+          Two-dimensional game assets were remixed from historical illuminated manuscripts and content created in collaborator with Ksenia Cherniavksa, a calligrapher and illuminated manuscript painter. Three-dimensional assets were modeled in Autodesk Maya and purchased or downloaded from online game asset marketplaces.
+      </p>
+
+  </body>
+</html>
