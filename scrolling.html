@@ -16,6 +16,7 @@
 
     <main>
     <section>
+      <h2>Scrolling in the Walled Garden</h2>
     <figure>
       <canvas id="unity-canvas" width=1280 height=720 style="width: 100%; height: 100%; background: #231F20"></canvas>
       <script src="assets/scrolling/Build/WebGL_Build.loader.js"></script>
@@ -36,10 +37,10 @@
           }
 
           createUnityInstance(document.querySelector("#unity-canvas"), {
-              dataUrl: "assets/scrolling/Build/WebGL_Build.data",
-              frameworkUrl: "assets/scrolling/Build/WebGL_Build.framework.js",
-              codeUrl: "assets/scrolling/Build/WebGL_Build.wasm",
-              streamingAssetsUrl: "assets/scrolling/StreamingAssets",
+              dataUrl: "/assets/scrolling/Build/WebGL_Build.data",
+              frameworkUrl: "/assets/scrolling/Build/WebGL_Build.framework.js",
+              codeUrl: "/assets/scrolling/Build/WebGL_Build.wasm",
+              streamingAssetsUrl: "/assets/scrolling/StreamingAssets",
               companyName: "Alan Perry",
               productName: "ScrollingInTheWalledGarden",
               productVersion: "0.1",
