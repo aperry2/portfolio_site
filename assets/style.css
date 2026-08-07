@@ -146,6 +146,16 @@ section {
   margin-block-end: 6rem;
 }
 
+h2 {
+  font-size: 3rem;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 2rem;
+  font-style: italic;
+}
+
 figure,
 nav {
   font-family: var(--mono);
@@ -184,4 +194,20 @@ img {
   height: auto;
   margin: auto;
   display: block;
+}
+
+p.excerpt {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  border-width: thin;
+  border-style: solid;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--ground);
+  border-color: var(--label);
+  display: block;
+  float: right;
+  margin-top: 2rem;
+  margin-right: 5rem;
+  margin-left: 2rem;
 }
